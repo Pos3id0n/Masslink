@@ -14,8 +14,10 @@ export class AuthenticationComponent {
 		private authenticationService: AuthenticationService,
 	) { }
 
-	public login(): void {
-		this.authenticationService.login('', '')
-			.then(_ => this.router.navigateByUrl('/'))
+	public login(): Promise<void> {
+		return this.authenticationService.login('', '')
+			.then(loggedIn => {
+				if (loggedIn) this.router.navigateByUrl('/')
+			})
 	}
 }
