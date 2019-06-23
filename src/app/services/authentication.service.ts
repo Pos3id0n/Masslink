@@ -4,6 +4,14 @@ import { Injectable } from '@angular/core'
 	providedIn: 'root',
 })
 export class AuthenticationService {
+	private _loggedIn = false
+	public async login(username: string, _password: string): Promise<boolean> {
+		console.info(`Logging ${username}`)
+		this._loggedIn = true
+		return this._loggedIn
+	}
 
-	constructor() { }
+	public loggedIn(): boolean {
+		return this._loggedIn
+	}
 }
