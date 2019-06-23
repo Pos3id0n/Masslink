@@ -14,7 +14,7 @@ export class AuthenticationComponent {
 		private authenticationService: AuthenticationService,
 	) { }
 
-	public submit(): void {
+	public login(): void {
 		this.authenticationService.login('', '')
 			.then(_ => this.router.navigateByUrl('/'))
 	}

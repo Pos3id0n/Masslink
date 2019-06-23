@@ -7,5 +7,4 @@ import { Component } from '@angular/core'
 })
 export class AppComponent {
 	public title = 'masslink'
-	public faviconPath = '/assets/favicon.ico'
 }

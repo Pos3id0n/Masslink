@@ -7,8 +7,12 @@ const appRoutes: Routes = [
 		loadChildren: './authentication/authentication.module#AuthenticationModule',
 	},
 	{
+		path: 'ml-home',
+		loadChildren: './home/home.module#HomeModule',
+	},
+	{
 		path: '**',
-		redirectTo: 'ml-authentication',
+		redirectTo: 'ml-home',
 		pathMatch: 'full',
 	},
 ]
